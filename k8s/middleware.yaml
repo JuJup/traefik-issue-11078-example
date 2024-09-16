@@ -7,7 +7,7 @@ spec:
     status:
       - "400"
       - "404"
-      - "400"
+      - "500"
     query: /{status}.html
     service:
       name: my-nginx-service
