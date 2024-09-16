@@ -1,0 +1,14 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: errors
+spec:
+  errors:
+    status:
+      - "400"
+      - "404"
+      - "400"
+    query: /{status}.html
+    service:
+      name: my-nginx-service
+      port: 80
